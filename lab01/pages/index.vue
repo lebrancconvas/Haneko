@@ -2,7 +2,7 @@
   <div>
     <header>
       <div>
-        <h1>StormContent</h1>
+        <h1>Haneko</h1>
       </div>
       <div>
         <h2>Best Platform to start your blog</h2>
