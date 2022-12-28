@@ -11,10 +11,10 @@
     <section id="action-section">
       <div>
         <NuxtLink to="/startblog">
-          <Button type="success">Start Your Blog</Button>
+          <Button id="start-blog-button" type="success">Start Your Blog</Button>
         </NuxtLink>
         <NuxtLink to="/bloglist">
-          <Button type="primary">Blog List</Button>
+          <Button id="blog-list-button" type="primary">Blog List</Button>
         </NuxtLink>
       </div>
     </section>
@@ -30,5 +30,20 @@
     padding: 0;
     margin: 0;
     text-align: center;
+    vertical-align: center;
+  }
+
+  #action-section {
+    margin: 30px;
+  }
+
+  #start-blog-button {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  #blog-list-button {
+    margin: 10px;
+    padding: 5px;
   }
 </style>

@@ -11,8 +11,8 @@
           <FormItem label="Blog Title">
             <Input v-model="blogForm.blogTitle" placeholder="Enter your blog title" required />
           </FormItem>
-          <FormItem label="Description">
-            <Input v-model="blogForm.blogDescription" placeholder="Blog Description" required />
+          <FormItem label="Post (Max 1000 Alphabets)">
+            <Input v-model="blogForm.blogDescription" size="large" maxlength="500" :rows="7" show-word-limit type="textarea" placeholder="Blog Description" required />
           </FormItem>
           <FormItem label="Category">
             <Select v-model="blogForm.blogCategory">
@@ -23,10 +23,10 @@
           </FormItem>
           <FormItem>
             <Button type="error" @click="reset">Reset</Button>
-            <Button type="success" @click="createBlog">Create Blog</Button>
+            <Button type="primary" @click="createBlog">Post</Button>
             <div>
               <Modal v-model="modalSuccess" title="Success">
-                <p>Create Blog Success.</p>
+                <p> Post Blog Success. </p>
               </Modal>
               <Modal v-model="modalFail" title="Warning">
                 <p>You must filled in all the required fields.</p>

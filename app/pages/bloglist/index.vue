@@ -7,7 +7,7 @@
     </header>
     <section id="blog-list-section">
       <div v-for="(blog, index) in results" :key="index">
-        <Card id="blog-list-card" style="width: 300px">
+        <Card id="blog-list-card" style="width: 450px">
           <template #title>
             <h2>
               {{ blog.Title }}
@@ -15,7 +15,7 @@
           </template>
           <div>
             <h3>{{ blog.Description }}</h3>
-            <Tag color="primary"> 
+            <Tag color="primary">
               <p>{{ blog.Category.toUpperCase() }}</p>
             </Tag>
           </div>
