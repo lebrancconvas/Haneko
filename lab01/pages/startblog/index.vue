@@ -22,7 +22,7 @@
             </Select>
           </FormItem>
           <FormItem>
-            <Button type="error">Reset</Button>
+            <Button type="error" @click="reset">Reset</Button>
             <Button type="success" @click="createBlog">Create Blog</Button>
           </FormItem>
         </Form>
@@ -50,6 +50,14 @@
           category: this.blogForm.blogCategory
         }
         console.log(blogInformation);
+        this.blogForm.blogTitle = "";
+        this.blogForm.blogDescription = "";
+        this.blogForm.blogCategory = "";
+      },
+      reset() {
+        this.blogForm.blogTitle = "";
+        this.blogForm.blogDescription = "";
+        this.blogForm.blogCategory = "";
       }
     }
   }
