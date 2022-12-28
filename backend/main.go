@@ -3,10 +3,11 @@ package main
 import (
 	"net/http"
 	"github.com/gin-gonic/gin" 
+	"github.com/gin-contrib/cors"
 )
 
 type Blog struct {
-	ID int `json: "id"`
+	ID string `json: "id"` 
 	Title string `json: "title"`
 	Description string `json: "description"`
 	Category string `json: "category"` 
@@ -37,6 +38,7 @@ func postBlog(c *gin.Context) {
 
 func main() {
 	r := gin.Default()
+	r.Use(cors.Default()) 
 	r.GET("/", getIndex) 
 	r.GET("/api/v1/blogs", getBlog)  
 	r.POST("/api/v1/blogs", postBlog) 
