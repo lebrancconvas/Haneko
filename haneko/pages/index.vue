@@ -13,6 +13,9 @@
         <NuxtLink to="/startblog">
           <Button type="success">Start Your Blog</Button>
         </NuxtLink>
+        <NuxtLink to="/bloglist">
+          <Button type="primary">Blog List</Button>
+        </NuxtLink>
       </div>
     </section>
   </div>
